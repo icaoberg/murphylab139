@@ -1,0 +1,26 @@
+Outline:
+	We plan to run m independent networks (permutations).
+	For each class n
+	    Randomize the order of instances.
+	    Assign the training set, stop set and test set
+	    Align the target output, and class assignment
+	Call to ml_featurenorm.m to normalize training and stop data.
+	For 10 classes, 40 training we will have
+	    trainnorm = [400 x numFeats] etc
+	    where top 40 are class 1, 2nd 40 are class 2, etc.
+        Call to ml_mlptraintest.m to train network
+        Run the trained network with test input
+	Each cell in testnetout are the results for one network
+	     for our input array so we expect for example
+		[0.9 0.3 0.2 ... 0.1] 1
+		[0.7 0.1 0.3 ... 0.1] 1
+                [0.2 0.8 0.3 ... 0.2] 2
+                [        ...        ]
+                [0.3 0.2 0.1 ... 0.9] 10 
+
+	
+	
+
+Input:
+	
+Output:

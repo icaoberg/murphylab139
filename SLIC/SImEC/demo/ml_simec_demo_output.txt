@@ -1,0 +1,60 @@
+
+                              < M A T L A B >
+                  Copyright 1984-2000 The MathWorks, Inc.
+                        Version 6.0.0.88 Release 12
+                                Sep 21 2000
+
+ 
+  To get started, type one of these: helpwin, helpdesk, or demo.
+  For product information, visit www.mathworks.com.
+ 
+SDC Morphology Toolbox V1.2 27Sep02 successfully installed
+Type one of these commands:
+help mminfo : to see the list of basic concepts
+help morph  : to see the list of functions
+help mmdemos: to see the list of demonstrations
+web(which('index.html')): to access the HTML documentation
+
+-------------------------------------------
+|   No implicit extended functionality.   |
+|   Matlab-only path has been loaded.     |
+|   It is recommended you check the path  |
+|    in case global path has changed.     |
+|   Directory is your current unix dir.   |
+|                                         |
+|          Edward Roques, Murphy Lab, CMU |
+-------------------------------------------
+
+>> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> 
+SImEC Demo.
+>>    A demonstration of SImEC comparing giantin and 
+>>    gpp130 with their corresponding DNA and crop 
+>>    images using nodna_nohar feature set.
+>> >> >> 
+Starting SImEC...
+Calculating features for image set 1
+Calculating image  1 of 90. Done!
+Calculating image  2 of 90. Done!
+Calculating image  3 of 90.  Interrupt
+Error in ==> /home/ejr/ml/SImEC/matlab/ml_find_branch_points.m
+On line 9  ==> branch_points = conv2(img,kernel,'same').*img;
+
+Error in ==> /home/ejr/ml/SImEC/matlab/ml_objskelfeats.m
+On line 24  ==> branch_points = ml_find_branch_points(double(objskel));
+
+Error in ==> /home/ejr/ml/SImEC/matlab/ml_imgskelfeats.m
+On line 28  ==>     [skelfeats, names] = ml_objskelfeats( objimage);
+
+Error in ==> /home/ejr/ml/SImEC/matlab/ml_features.m
+On line 270  ==>         [skelnames, skelvals, skelslf] = ml_imgskelfeats( procimage);
+
+Error in ==> /home/ejr/ml/SImEC/matlab/ml_featset.m
+On line 208  ==> [n,f,s] = ml_features( procimage, procdnaimage, prot_maskimage, ...
+
+Error in ==> /home/ejr/ml/SImEC/matlab/ml_calcfeat.m
+On line 120  ==>     [names, values, slf] = ml_featset(image, crop, dna, featsetname);
+
+Error in ==> /home/ejr/ml/SImEC/matlab/ml_simec.m
+On line 81  ==> [total_names1, total_features1, total_slf1, empty_pre1, empty_post1, ...
+
+>> 

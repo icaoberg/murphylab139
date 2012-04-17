@@ -1,0 +1,16 @@
+http://yeastgfp.ucsf.edu/archive/yeastGFPImagesChrI.tar.gz
+http://yeastgfp.ucsf.edu/archive/yeastGFPImagesChrII.tar.gz
+http://yeastgfp.ucsf.edu/archive/yeastGFPImagesChrIII.tar.gz
+http://yeastgfp.ucsf.edu/archive/yeastGFPImagesChrIV.tar.gz
+http://yeastgfp.ucsf.edu/archive/yeastGFPImagesChrV.tar.gz
+http://yeastgfp.ucsf.edu/archive/yeastGFPImagesChrVI.tar.gz
+http://yeastgfp.ucsf.edu/archive/yeastGFPImagesChrVII.tar.gz
+http://yeastgfp.ucsf.edu/archive/yeastGFPImagesChrVIII.tar.gz
+http://yeastgfp.ucsf.edu/archive/yeastGFPImagesChrIX.tar.gz
+http://yeastgfp.ucsf.edu/archive/yeastGFPImagesChrX.tar.gz
+http://yeastgfp.ucsf.edu/archive/yeastGFPImagesChrXI.tar.gz
+http://yeastgfp.ucsf.edu/archive/yeastGFPImagesChrXII.tar.gz
+http://yeastgfp.ucsf.edu/archive/yeastGFPImagesChrXIII.tar.gz
+http://yeastgfp.ucsf.edu/archive/yeastGFPImagesChrXIV.tar.gz
+http://yeastgfp.ucsf.edu/archive/yeastGFPImagesChrXV.tar.gz
+http://yeastgfp.ucsf.edu/archive/yeastGFPImagesChrXVI.tar.gz

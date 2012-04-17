@@ -1,0 +1,104 @@
+
+                              < M A T L A B >
+                  Copyright 1984-2002 The MathWorks, Inc.
+                      Version 6.5.0.180913a Release 13
+                                Jun 18 2002
+
+  Using Toolbox Path Cache.  Type "help toolbox_path_cache" for more info.
+ 
+  To get started, type one of these: helpwin, helpdesk, or demo.
+  For product information, visit www.mathworks.com.
+ 
+>> >> >> >> >> >> >> >> >> >> >> loading training data...
+>> >> >> >> >> >> Using feature subset SLF8dna, calling polynomial.
+>> >> >> >> >> >> >> >> 
+ans =
+
+   862    32
+
+>> >> >> >> >> >> >> 
+eindex =
+
+   862
+
+>> >> >> >> >> >> >> >> >> >> >> >> >> >> >> calling model dagsvm, using polynomial kernel.
+using polynomial level 2.000000, using C value of 1.000000e-03
+/imaging/khuang/classif/svm_v0.54/@polynomial/polynomial.m  % polynomial method
+/imaging/khuang/classif/svm_v0.54/@polynomial/polynomial.m  % polynomial method
+/imaging/khuang/classif/svm_v0.54/@polynomial/polynomial.m  % polynomial method
+/imaging/khuang/classif/svm_v0.54/@polynomial/polynomial.m  % polynomial method
+/imaging/khuang/classif/svm_v0.54/@polynomial/polynomial.m  % polynomial method
+/imaging/khuang/classif/svm_v0.54/@polynomial/polynomial.m  % polynomial method
+/imaging/khuang/classif/svm_v0.54/@polynomial/polynomial.m  % polynomial method
+/imaging/khuang/classif/svm_v0.54/@polynomial/polynomial.m  % polynomial method
+/imaging/khuang/classif/svm_v0.54/@polynomial/polynomial.m  % polynomial method
+/imaging/khuang/classif/svm_v0.54/@polynomial/polynomial.m  % polynomial method
+
+confusion_matrix =
+
+    85     2     0     0     0     0     0     0     0     0
+     0    77     0     0     4     1     0     0     0     4
+     0     0    69    14     2     0     0     0     2     0
+     1     0    18    62     1     0     2     0     1     0
+     0     2     0     0    77     0     0     0     5     0
+     0     3     0     0     3    57     0     0     1     9
+     0     0     1     0     7     0    72     0     0     0
+     0     0     0     0     0     1     0    97     0     0
+     0     1     0     0    20     2     0     1    60     7
+     0     6     0     0     0     5     0     0     6    74
+
+correct=730, the average correctness is 84.69%
+using C value of 5.000000e-03
+/imaging/khuang/classif/svm_v0.54/@polynomial/polynomial.m  % polynomial method
+/imaging/khuang/classif/svm_v0.54/@polynomial/polynomial.m  % polynomial method
+/imaging/khuang/classif/svm_v0.54/@polynomial/polynomial.m  % polynomial method
+/imaging/khuang/classif/svm_v0.54/@polynomial/polynomial.m  % polynomial method
+/imaging/khuang/classif/svm_v0.54/@polynomial/polynomial.m  % polynomial method
+/imaging/khuang/classif/svm_v0.54/@polynomial/polynomial.m  % polynomial method
+/imaging/khuang/classif/svm_v0.54/@polynomial/polynomial.m  % polynomial method
+/imaging/khuang/classif/svm_v0.54/@polynomial/polynomial.m  % polynomial method
+/imaging/khuang/classif/svm_v0.54/@polynomial/polynomial.m  % polynomial method
+/imaging/khuang/classif/svm_v0.54/@polynomial/polynomial.m  % polynomial method
+
+confusion_matrix =
+
+    86     1     0     0     0     0     0     0     0     0
+     0    79     0     0     4     1     0     0     0     2
+     1     0    74    10     1     0     0     0     1     0
+     1     0    18    64     0     0     1     0     1     0
+     1     2     0     0    72     0     1     0     8     0
+     1     3     0     0     1    64     0     0     1     3
+     1     0     1     0     0     0    77     0     1     0
+     0     0     0     0     0     1     0    97     0     0
+     3     1     0     0    13     2     0     0    69     3
+     1     5     0     0     0     0     0     0     6    79
+
+correct=761, the average correctness is 88.28%
+using C value of 7.500000e-03
+/imaging/khuang/classif/svm_v0.54/@polynomial/polynomial.m  % polynomial method
+/imaging/khuang/classif/svm_v0.54/@polynomial/polynomial.m  % polynomial method
+/imaging/khuang/classif/svm_v0.54/@polynomial/polynomial.m  % polynomial method
+/imaging/khuang/classif/svm_v0.54/@polynomial/polynomial.m  % polynomial method
+/imaging/khuang/classif/svm_v0.54/@polynomial/polynomial.m  % polynomial method
+/imaging/khuang/classif/svm_v0.54/@polynomial/polynomial.m  % polynomial method
+/imaging/khuang/classif/svm_v0.54/@polynomial/polynomial.m  % polynomial method
+/imaging/khuang/classif/svm_v0.54/@polynomial/polynomial.m  % polynomial method
+/imaging/khuang/classif/svm_v0.54/@polynomial/polynomial.m  % polynomial method
+/imaging/khuang/classif/svm_v0.54/@polynomial/polynomial.m  % polynomial method
+
+confusion_matrix =
+
+    86     1     0     0     0     0     0     0     0     0
+     2    78     0     0     4     0     0     0     0     2
+     1     0    71    13     1     0     0     0     1     0
+     1     0    18    64     0     0     1     0     1     0
+     0     2     0     0    74     0     1     0     7     0
+     1     2     0     0     1    65     0     0     0     4
+     1     0     1     0     1     0    77     0     0     0
+     0     0     0     0     0     0     0    98     0     0
+     3     1     0     0    14     2     0     0    68     3
+     1     5     0     0     0     0     0     1     3    81
+
+correct=762, the average correctness is 88.40%
+>> >> bye bye...
+>> >> >> >> >> 

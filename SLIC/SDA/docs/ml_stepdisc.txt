@@ -1,0 +1,29 @@
+Outline:
+	Calls ml_make_sasstepdiscinp.m to prepare input data
+	Packages input and command files
+	Sends this package across a network using ssh
+	Runs package on network machine with SAS
+	Return output across network
+	Output is read by ml_read_sasstepdiscout.m
+
+Input:
+	Feature matrix
+	Full path to save SAS output (includes filename)
+	hostname
+
+Output:
+	Ordered index array
+
+Temp Directory:
+     A temp directory is used to store input. This is set to '/imaging/tmp'
+     To edit this change the line beginning 'temp_dir ='
+
+External Programs:
+	 'tar' - Used to archive input
+	 'ssh' - Used to send input and command across a network
+	 'cat' - Used to capture output
+	 'sas' - Calls SAS software package
+	 'rm' - Removes input file
+
+Notes:
+	Waits for user to input password for hostname

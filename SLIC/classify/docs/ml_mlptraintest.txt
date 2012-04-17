@@ -1,0 +1,31 @@
+Outline:
+	A 'logistic' i.e. sigmoidal function NN created
+	Momentum set to 0.9
+	Learning rate set to 0.001
+	Call to ml_mlptrain.m which optimizes the network
+	Each pass, the (rounded) error of the test data (stop data) is 
+         returned and the pass number which generated that value is 
+         recorded.
+        If a minimum value persists, training is stopped.
+        A fresh network is then retrained (without testing) for the
+         number of passes it takes to reach the minimum(as determined
+         previously).
+        The network is then run with training and test (stop) data and
+         the results returned
+	
+	
+
+Input:
+	ri - Training samples for 1 permut. of all classes e.g. [400 x 37]
+        ro - Training outputs for all classes
+        ti - Test samples (i.e. can be stop set) 
+        to - Test outputs
+	hidden - Number of Hidden nodes
+	epochs - Number of times to sweep the whole set each time
+
+Output:
+	rnetout - Output from training samples
+	tnetout - Output from test samples
+	imin - epoch at which the sum of the squared error was minimized
+	     for the test set
+	net - the trained network

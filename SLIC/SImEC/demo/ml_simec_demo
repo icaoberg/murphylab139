@@ -1,0 +1,4 @@
+#!/bin/sh
+echo "Running SImEC demo";
+echo "Results will be saved to the current directory";
+matlab -nodisplay < ./matlab/ml_simec_demo.m > ml_simec_demo_output.txt

@@ -1,0 +1,140 @@
+README
+This distribution contains all the codes and data for the work described in
+
+Shann-Ching Chen, Ting Zhao, Geoffrey J. Gordon, and Robert F. Murphy. 
+Automated Image Analysis of Protein Localization in Budding Yeast. 
+Bioinformatics 23:i66-i71, 2007.
+
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published
+by the Free Software Foundation; either version 2 of the License,
+or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+02110-1301, USA.
+
+For additional information visit http://murphylab.web.cmu.edu or
+send email to murphy@cmu.edu
+======
+Instructions for running the simulations and generating the figures
+in the paper
+
+==================================================================
+Image Preparation 
+
+The yeast image collection can be downloaded from http://yeastgfp.ucsf.edu/
+
+Please make a directory D (Ex: '/etc/tmp') to store these images first.
+To download the images, first copy yeast_image_download.pl and yeast_image_download.txt to D.
+1) Run 'perl yeast_image_download.pl' for downloading.
+2) After the downloading is finished, run 'untargz.sh' to unzip the files.
+3) Specify the yeastRoot variable in make_procfile.m
+% yeastRoot is the Root directory where the images are stored
+% Default value:
+yeastRoot = '/images/yeastGFP';
+
+
+After this, you are ready to perform downstream analysis.
+
+
+==================================================================
+Option 1:  If using a single computer:
+
+Run "makedata.m" to generate all the data and results
+
+===
+
+Option 2:  If using a computer cluster:
+
+The analyses in makedata.m are divided into a number of scripts
+so that each can be run on a different machine (e.g., in a Beowulf
+cluster environment).  
+There are several script which need a lot of computaions as following:
+1. makedata1.m for image segmentation
+2. makedata2.m for cell level feature calculation
+3. makedata3.m for field level feature calculation
+4. makedata4.m to load features for cell level classification
+5. makedata5.m for cell level classification with purality voting scheme
+6. makedata6.m to load features for field level classification
+7. makedata7.m for field level classification
+8. makedata8.m for creating tables and figures in the paper
+
+
+In this case, makedata0.m should be run first to generate yeastdata.mat and procfiles.mat (under ./data)
+which contains yeast image path and UCSF localization categories and labels
+
+After the data have been generated, makedata1 through makedata7
+can be run on separate nodes to generate the results 
+(e.g. using "sh makedata1_clusterv1.sh", "sh makedata2_clusterv1.sh", "sh makedata3_clusterv1.sh"
+ ,"sh makedata4_clusterv1.sh, "sh makedata6_clusterv1.sh" and "sh makedata7_clusterv1.sh").
+
+Note that, scripts related to cell level classification of 25 seeds(in makedata5.m) should be executed in the following order:
+(1) sh makedata5_createnfoldscriptFlag3.sh  
+    Usage: Create index file: it takes about one hour for each seed, which this should be done first.
+(2) sh makedata5_classifyscriptFlag3R.sh    
+    Usage: Do classification on 20 class: it takes about 7*6 hours per seed, which can run after index files have been created.
+(3) sh makedata5_combinefoldcriptFlag3.sh   
+    Usage: Combine results from each fold per seed: it does not take long, which can run after classification results are available.
+(4) sh makedata5_combineseedcriptFlag3.sh   
+    Usage: Combine results from each seed: it takes about 10 minutes, which can run after each classification fold is combined.
+(5) sh makedata5_combinefoldcriptFlag41.sh  
+    Usage: Do classification on ambiguous class: it takes about two hour per seed, which can run after classifiers are trained.
+(6) sh makedata5_combinefoldcriptFlag42.sh  
+    Usage: Do classification on punctate_composite class: it takes about one hour per seed, which can run after classifiers are trained.
+(7) sh makedata5_combineseedcriptFlag41.sh  
+    Usage: Combine results from each fold and each seed: it takes about 10 minutes, which can run after each classification fold is combined.
+(8) sh makedata5_combineseedcriptFlag42.sh
+    Usage: Combine results from each fold and each seed: it takes about 10 minutes, which can run after each classification fold is combined.
+
+Also, scripts related to field level classification should be executed in order after the all the images have been processed.
+(e.g. you have to finish the field level feature calculation before you do the field level classification).
+
+Lastly, "makedata8.m" should be executed generate the tables and figures.
+
+===
+The UCSF yeast location category and lables:
+
+The file allOrfData.txt (under ./data) contains the UCSF yeast location category and lables
+and can be downloaded from http://yeastgfp.ucsf.edu/allOrfData.txt
+
+
+===
+The CYGD yeast location category and lables:
+
+There are two files for assigning the labels: data/schemarr.txt and data/subcellulardata.txt 
+The file schemarr.txt (downloaded from ftp://ftpmips.gsf.de/yeast/catalogues/subcellcat/subcellcat.scheme) 
+contains two columns. The first column contains the location numbers and the second column contains the location names. 
+The function tz_loadlocschm can be used to parse this file. 
+
+The file subcellulardata.txt (downloaded from ftp://ftpmips.gsf.de/yeast/catalogues/subcellcat/subcellcat_data_14112005)
+contains information about ORFs. 
+Each row has the structure like: ORF_NAME|LOCATION_LABEL|...|... 
+The function tz_loadlocdata is for parsing this file. 
+
+Given any image file name, you need to extract ORF name first. 
+Then search ORF name in subcellulardata.txt to get its location label. 
+
+For example: 
+filepath = '/images/yeastGFP/ChrXVI/YPR191W_ver00-A-2000ms_GFP.png';
+orf = tz_getgenename(filepath); %it will return 'YPR191W'
+locs = tz_loadlocdata('data/subcellulardata.txt');
+index = strmatch(orf,locs.geneNames,'exact');
+label = locs.locationLabels{index};
+
+======
+A MATLAB LIBSVM Toolbox is used in this work (under ./SLIC/classify/libsvm).
+
+The toolbox is Copyright (c) Chih-Chung Chang and Chih-Jen Lin, LIBSVM : a library for support vector machines, 2001
+This software is available at http://www.csie.ntu.edu.tw/~cjlin/libsvm/
+
+
+A SLIC (Subcellular Localization Image Classifier) toolbox is also used in this work (under ./SLIC)
+This software is available at http://pslid.cbi.cmu.edu/release/

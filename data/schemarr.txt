@@ -1,0 +1,57 @@
+701	 extracellular
+705	 bud
+705.01	  bud tip
+705.03	  neck  
+710	 cell wall
+715	 cell periphery
+720	 plasma membrane
+722	 integral membrane / endomembranes (if not assigned to a specific membrane)
+725	 cytoplasm
+730	 cytoskeleton
+730.01	 actin cytoskeleton
+730.01.03    actin patches
+730.03	 tubulin cytoskeleton
+730.05	 spindle pole body
+730.07	 intermediate filaments
+730.99	 other cytoskeleton components
+735	 ER
+735.01	 ER membrane
+735.05	 ER lumen
+740	 golgi
+740.01	 golgi membrane
+740.05	 golgi lumen
+745	 transport vesicles
+745.01	 ER-golgi transport vesicles
+745.03	 golgi-ER transport vesicles
+745.05	 inter-golgi transport vesicles
+745.07	 golgi-plasma membrane transport vesicles
+745.09	 golgi-vacuole transport vesicles
+745.11	 endocytotic transport vesicles
+745.99	 other transport vesicles
+750	 nucleus
+750.01	 nuclear envelope
+750.02   nuclear periphery
+750.03	 nuclear matrix
+750.05	 nucleolus
+750.07	 nuclear pore
+750.09	 chromosome structure
+750.11   centrometre/kinetochore
+755	  mitochondria
+755.01	 mitochondrial outer membrane
+755.03	 mitochondrial intermembrane space
+755.05	 mitochondrial inner membrane
+755.07	 mitochondrial matrix
+760	 peroxisome
+760.01	 peroxisomal membrane
+760.03	 peroxisomal matrix
+765	 endosome
+765.01	 early endosome
+765.03	 late endosome (pre-vacuolar)
+770	 vacuole
+770.01	 vacuolar membrane
+770.03	 vacuolar lumen
+775	 microsomes
+780	 lipid particles
+790  punctate composite
+795  ambiguous
+799	 other subcellular localisation

@@ -1,0 +1,4 @@
+Outline:
+	Computes confusion matrices.
+	The winning class for a single network is assumed to be that which
+	 has the highest output

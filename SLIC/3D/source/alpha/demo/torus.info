@@ -1,0 +1,170 @@
+#
+# Delcx 4.1 (./delcx), on wizard.stc.cmu.edu, Fri Apr  5 21:55:56 2002
+#
+  Data: torus
+  Title: Torus. 
+elaunay Simplicial Complex
+         256 . vertices
+       0.300 . cpu secs
+        5262 . transform mainloops
+        2462 . triangle-to-edge flips
+        1576 . edge-to-triangle flips
+           0 . vertex flips
+        1224 . skips
+        1309 . tetrahedra (was: 1333, flat: 24)
+        2760 . triangles (was: 2808, last: 2760, max: 4160)
+        1706 . edges (was: 1730)
+       50691 . Orgs
+      446360 . Syms
+      282312 . Enexts
+      410965 . Fnexts
+       72810 . Fsplices
+* External facets
+         322 . tetrahedra
+         504 . triangles
+         186 . edges
+           0 . Vertices not inserted
+       0.000 . Average search length when not inserted
+         752 . In-sphere tests
+* Convex hull
+         144 . vertices (was: 144)
+         426 . edges (was: 426)
+         284 . triangles (was: 284)
+* Lia counters
+      511252 . Lia mul calls
+      645783 . Lia mul elops
+      174246 . Lia add calls
+      302279 . Lia add elops
+      453605 . Lia sub calls
+      698851 . Lia sub elops
+           4 . Lia maximum digit
+* SoS lambda5, non-zero depth counters
+        9916
+        1285
+         298
+         238
+         238
+         238
+           9
+* SoS lambda4, non-zero depth counters
+       17704
+         906
+         264
+          14
+* SoS lambda3_col, non-zero depth counters
+        4108
+         593
+         101
+          83
+           4
+* SoS lambda2, non-zero depth counters
+        2554
+         508
+* SoS minor evaluations
+        9916 . 5-by-5
+       24630 . 4-by-4
+        5301 . 3-by-3
+        3331 . 2-by-2
+* SoS summary
+           6 . max depth
+    0.139403 . mean depth
+* SoS infinite tests - lambda4
+       15798 . 0 infinite points
+        3627 . 1 infinite points
+        2327 . 2 infinite points
+          19 . 3 infinite points
+           0 . 4 infinite points
+* SoS infinite tests - lambda5
+        9916 . 0 infinite points
+        1906 . 1 infinite points
+         481 . 2 infinite points
+         227 . 3 infinite points
+           1 . 4 infinite points
+* Flip vs. Search
+
+    Positive3 tests
+                             Number of Infinite Points
+			   0        1        2        3
+	Search		    3517     2480     2163        0 
+	Succ. flip	    9347     1045      128       18 
+	Unsucc. flip	    2934      102       36        1 
+
+* Miscellaneous
+       4.261 . % UBT utilization
+          36 . bytes per triangle
+       0.032 . Mb SoS
+     319.763 . Mb Trist + Cascade record (36 bytes per triangle)
+       0.502 . Mb malloc, total (arena: 4096.000 Mb)
+        0.35 .  CPU secs, delcx total
+        0.38 . real secs, delcx total
+#
+# Mkalf 4.1 (./mkalf), on wizard.stc.cmu.edu, Fri Apr  5 21:57:31 2002
+#
+  Data: torus
+  Title: Torus. 
+         256 . vertices
+        5775 . DT faces
+* Spectrum and masterlist
+        3114 . rho-values
+         219 . alpha-ranks (spectrum)
+       11704 . masterlist entries
+      53.443 . average sublist length
+* Work and memory
+       33596 . ratio comparisons (0.93 * n*ld(n), n = 3114)
+        5720 . Lia pool objects (2 blocks)
+         3.7 . average object length (in Lia digits)
+       0.103 . Mb Lia pool
+       0.006 . Mb t_hash_table        1637 *  4 bytes
+       0.008 . Mb e_hash_table        2137 *  4 bytes
+       0.006 . Mb       t_rank F      1638 *  4 bytes
+       0.032 . Mb       f_rank F      2761 * 12 bytes
+       0.024 . Mb       e_rank F      2138 * 12 bytes
+       0.004 . Mb       v_rank F       334 * 12 bytes
+       0.001 . Mb     spectrum F       220 *  4 bytes
+       0.001 . Mb     master_p         220 *  4 bytes
+       0.045 . Mb  master_node F     11705 *  4 bytes
+       0.011 . Mb  master_type F     11705 *  1 bytes
+       0.092 . Mb   tlist_node t      6032 * 16 bytes
+       0.006 . Mb   tlist_type t      6032 *  1 bytes
+       0.012 . Mb        table t      3115 *  4 bytes
+       0.118 . Mb   mheap_node t     15476 *  8 bytes
+       0.015 . Mb   mheap_type t     15476 *  1 bytes
+       0.012 . Mb         auxi t      3117 *  4 bytes
+       0.392 . Mb (sum w/o Lia Pool)
+       0.552 . Mb total temp memory
+* Lia counters
+      458889 . lia_mul calls
+     1393877 . lia_mul elops
+      143694 . Lia add calls
+      269905 . Lia add elops
+      425500 . Lia sub calls
+      789713 . Lia sub elops
+          10 . Lia maximum digit
+* Primitive calls
+           0 . Rho/Size0
+         799 . Rho/Size1
+         750 . Rho/Size2
+        1309 . Rho/Size3
+           0 . Hidden0
+        6106 . Hidden1
+        4408 . Hidden2
+* Minor evaluations
+           0 . 0-by-0
+           0 . 1-by-1
+       64101 . 2-by-2
+       19882 . 3-by-3
+       25486 . 4-by-4
+           0 . 5-by-5
+* Hashing
+        5.31 .  edge fnexts/query,      92500 /      17412
+        1.76 .  edge probes/query,      30614 /      17412, load factor 0.80
+        1.77 . tetra probes/query,       9280 /       5236, load factor 0.80
+           4 . prime tests
+          43 . prime modulos
+* Miscellaneous
+       0.033 . Mb SoS (parameter matrix)
+       0.095 . Mb Trist (36 bytes per triangle)
+       0.143 . Mb Alf
+       0.772 . Mb malloc, total (arena: 4096.000 MB)
+        0.42 .  CPU secs, mkalf total
+        0.46 . real secs, mkalf total

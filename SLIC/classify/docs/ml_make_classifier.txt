@@ -1,0 +1,37 @@
+Outline:
+	Pass in features of each instance (1 feature matrix) for each of 
+	 n classes. 
+	A class assignment array is automatically generated. Class
+	 assignment is an n class cell array. For class i, the matrix
+	 in cell array i has a value 1 for every row in column i and a 0
+	 otherwise.
+	Desired outputs are automatically generated. Desired outputs is an
+	 n class cell array. For class i, the matrix in cell array i has a
+	 value 0.9 for every row in column i and a value 0.1 otherwise.
+	Calls ml_mlptrainstoptest.m to train, and test a NN
+	Calls ml_confmat.m to output results
+
+Input:
+	features - A cell array of feature matrices such that each cell
+		 represents each class, each row of each feature matrix
+		 represents each instance and each column of each feature
+		 matrix represents each feature. The number of columns in
+		 each matrix must be the same, althought the number of
+		 rows can differ.
+	subset_index - Index array of the features to use in each feature
+		     matrix
+	TrainSetSize - The number of instances from each feature matrix
+		     for use in training the classifier
+	StopSetSize - The number of instances from each feature matrix
+		    for use in deciding when to stop training
+	HiddenLayerSize - The number of hidden nodes
+	EpochsAtOnce - Numbers of times to sweep EVERY instance for each
+		      training session
+        NoOfNets - Number of nets to train with variable subsets
+
+Output:
+	nn - A cell array of networks (1xNoOfNets)
+	stopidx - Indices of stop samples
+	confmat - 
+	confmats -
+	crates - 
