@@ -25,4 +25,4 @@
 
 DIRECTORY=./images
 cd $DIRECTORY
-perl perl yeast_image_download.pl
+perl yeast_image_download.pl
