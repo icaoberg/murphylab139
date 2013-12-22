@@ -25,4 +25,8 @@
 
 DIRECTORY=./images
 cd $DIRECTORY
-perl yeast_image_download.pl
+for LINE in $(cat yeast_image_download.txt)
+do
+	echo "Downloading " $LINE
+	wget -nc $LINE
+done
