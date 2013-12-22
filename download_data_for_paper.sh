@@ -23,10 +23,6 @@
 # For additional information visit http://murphylab.web.cmu.edu or
 # send email to murphy@cmu.edu
 
-DIRECTORY=./images/yeastGFP
-mkdir $DIRECTORY
-cd $DIRECTORY
-cp copy yeast_image_download.pl $DIRECTORY
-cp yeast_image_download.txt $DIRECTORY
+DIRECTORY=./images
 cd $DIRECTORY
 perl perl yeast_image_download.pl
