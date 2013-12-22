@@ -31,6 +31,10 @@ for LINE in $(cat yeast_image_download.txt)
 do
 	echo "Downloading " $LINE
 	$WGET -nc $LINE
+done
+
+FOR FILE in *.tar
+do
 	tar -xvf $LINE
 done
 
