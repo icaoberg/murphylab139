@@ -35,7 +35,7 @@ done
 
 for FILE in *.tar
 do
-	tar -xvf $LINE
+	tar -xvf $FILE
 done
 
 cd ../
