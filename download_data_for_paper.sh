@@ -33,7 +33,7 @@ do
 	$WGET -nc $LINE
 done
 
-FOR FILE in *.tar
+for FILE in *.tar
 do
 	tar -xvf $LINE
 done
