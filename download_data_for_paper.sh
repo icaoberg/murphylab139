@@ -24,9 +24,11 @@
 # send email to murphy@cmu.edu
 
 DIRECTORY=./images
+WGET=/opt/local/bin/wget
+
 cd $DIRECTORY
 for LINE in $(cat yeast_image_download.txt)
 do
 	echo "Downloading " $LINE
-	wget -nc $LINE
+	$WGET -nc $LINE
 done
